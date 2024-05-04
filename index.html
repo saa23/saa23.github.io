@@ -143,26 +143,56 @@
 				<!-- Footer -->
 					<footer id="footer">
 						<section>
-						<p style="color:#212931; font-size:25px;font-family: Source Sans Pro, Helvetica, sans-serif;">Feel free to discuss with me!</p>
-							<form method="post" action="#">
+						<p style="color:#212931; font-size:25px;font-family: Source Sans Pro, Helvetica, sans-serif;">Feel free to discuss with me! ☕</p>
+							<form id="contactForm" target="_blank" action="https://formsubmit.co/achmadgunarsaadi@gmail.com" method="POST">
 								<div class="fields">
 									<div class="field">
 										<label for="name">Name</label>
-										<input type="text" name="name" id="name" />
+										<input type="text" name="name" id="name" required/>
 									</div>
 									<div class="field">
 										<label for="email">Email</label>
-										<input type="text" name="email" id="email" />
+										<input type="text" name="email" id="email" required/>
 									</div>
 									<div class="field">
 										<label for="message">Message</label>
-										<textarea name="message" id="message" rows="3"></textarea>
+										<textarea name="message" id="message" rows="3" required></textarea>
 									</div>
 								</div>
 								<ul class="actions">
 									<li><input type="submit" value="Send Message" /></li>
 								</ul>
 							</form>
+<!--
+							<script>
+								document.getElementById("contactForm").addEventListener("submit", function(event) {
+									event.preventDefault(); // Prevent the form from submitting normally
+								
+									// Fetch form values
+									var name = document.getElementById("name").value;
+									var email = document.getElementById("email").value;
+									var message = document.getElementById("message").value;
+								
+									// Prepare email body
+									var body = "Name: " + name + "\n";
+									body += "Email: " + email + "\n";
+									body += "Message: \n" + message;
+								
+									// Send email (This is a placeholder. You need to implement your own email sending mechanism)
+									sendEmail(body);
+								});
+								
+								function sendEmail(body) {
+									// Implement your email sending logic here
+									// This could be done using a server-side language like PHP or through an email service provider's API
+									// For example, if you're using a service like SendGrid or Mailgun, you would make an HTTP request to their API
+									// and pass the email details (body) to it.
+									// For demonstration purposes, you can simply log the email body to console.
+									console.log("Email Body:");
+									console.log(body);
+								}
+								</script>
+-->
 						</section>
 						<!--
 						<section class="split contact">
@@ -193,9 +223,9 @@
 					</footer>
 
 				<!-- Copyright -->
-					<div id="copyright">
+					<!-- <div id="copyright">
 						<ul><li>&copy; Untitled</li><li>Design: <a href="https://html5up.net">HTML5 UP</a></li></ul>
-					</div>
+					</div> -->
 
 			</div>
 
